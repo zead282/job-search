@@ -1,0 +1,741 @@
+{
+	"info": {
+		"_postman_id": "1ef3d00d-4821-4b97-a936-b3f1962cd75b",
+		"name": "job-search",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32604531"
+	},
+	"item": [
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "signup",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"zead\",\r\n    \"lastName\": \"mohamed\",\r\n    \"email\": \"zyaddrwysh7@gmail.com\",\r\n    \"password\": \"12345\",\r\n    \"cpass\":\"12345\",\r\n    \"recoveryEmail\": \"recovery@example.com\",\r\n    \"DOB\": \"1990-01-01\",\r\n    \"mobileNumber\": \"01127280362\",\r\n    \"role\": \"User\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/user/signup",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    //\"password\":\"12345\",\r\n    //\"emailOrMobile\":\"zyaddrwysh9@gmail.com\"\r\n    \"password\":\"12345\",\r\n    \"emailOrMobile\":\"zyaddrwysh3@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/user/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateuser",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "accesstoken",
+								"value": "accesstoken_eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Inp5YWRkcnd5c2g3QGdtYWlsLmNvbSIsIl9pZCI6IjY2OGI4Y2I5YTVmOGIwYzU0MDI4NWQwZCIsInN0YXR1cyI6Im9ubGluZSIsImlhdCI6MTcyMDQyMTYyMiwiZXhwIjoxNzIwNTA4MDIyfQ.mAT3VQTHXQXXOQnGCib7TUCWHKNM1M6KmjGEdq5BAqQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"DOB\":\"1990-01-01\",\r\n    \"mobileNumber\":\"11111111117\",\r\n    \"email\":\"zyaddrwysh9@gmail.com\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/user/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "accesstoken",
+								"value": "accesstoken_eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Inp5YWRkcnd5c2g3QGdtYWlsLmNvbSIsIl9pZCI6IjY2OGI4Y2I5YTVmOGIwYzU0MDI4NWQwZCIsInN0YXR1cyI6Im9ubGluZSIsImlhdCI6MTcyMDQyMTYyMiwiZXhwIjoxNzIwNTA4MDIyfQ.mAT3VQTHXQXXOQnGCib7TUCWHKNM1M6KmjGEdq5BAqQ",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/user/delete",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user-account",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accesstoken",
+								"value": "accesstoken_eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Inp5YWRkcnd5c2gzQGdtYWlsLmNvbSIsIl9pZCI6IjY2OGIxNTVkYTJkYWIwODM5NjQzZDM3OCIsInN0YXR1cyI6Im9ubGluZSIsImlhdCI6MTcyMDQyMTg5MiwiZXhwIjoxNzIwNTA4MjkyfQ.b-jhE5I5VcCg15Ej0V5xg5rzbgmr3LrMdquo9KQgPgo",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/user/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-sp-user",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "userid",
+								"value": "668a35273ed4ba6603ae008c",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/user/sp-user/668b155da2dab0839643d378",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"sp-user",
+								"668b155da2dab0839643d378"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update-password",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "accesstoken",
+								"value": "accesstoken_eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Inp5YWRkcnd5c2gzQGdtYWlsLmNvbSIsIl9pZCI6IjY2OGIxNTVkYTJkYWIwODM5NjQzZDM3OCIsInN0YXR1cyI6Im9ubGluZSIsImlhdCI6MTcyMDQyMTg5MiwiZXhwIjoxNzIwNTA4MjkyfQ.b-jhE5I5VcCg15Ej0V5xg5rzbgmr3LrMdquo9KQgPgo",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"password\":\"12345\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/user/update-password",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"update-password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "forget-password",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"zyaddrwysh9@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/user/forget-password",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"forget-password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "reset-password",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"newpassword\":\"12345\",\r\n    \"otp\":\"953166\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/user/reset-password",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"reset-password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "recovery-emails",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/user/get-rec-emails/recovery@example.com",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"get-rec-emails",
+								"recovery@example.com"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "company",
+			"item": [
+				{
+					"name": "add",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "accesstoken",
+								"value": "accesstoken_eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Inp5YWRkcnd5c2g5QGdtYWlsLmNvbSIsIl9pZCI6IjY2OGEzNTI3M2VkNGJhNjYwM2FlMDA4YyIsInN0YXR1cyI6Im9ubGluZSIsImlhdCI6MTcyMDQyNTY0MSwiZXhwIjoxNzIwNTEyMDQxfQ.mvdJBZG8jnpzsSUlv4wVsIUBQk498j5SSZMlR4_36xY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \r\n  \"companyName\": \"company3\",\r\n  \"description\": \"We provide cutting-edge technological solutions.\",\r\n  \"industry\": \"Technology\",\r\n  \"address\": \"123 Tech Avenue, Silicon Valley, CA\",\r\n  \"numberOfEmployees\": \"50-200\",\r\n  \"companyEmail\": \"info@techinnovatojs.com\"\r\n  \r\n\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/company/add-company",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"company",
+								"add-company"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "accesstoken",
+								"value": "accesstoken_eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Inp5YWRkcnd5c2g5QGdtYWlsLmNvbSIsIl9pZCI6IjY2OGEzNTI3M2VkNGJhNjYwM2FlMDA4YyIsInN0YXR1cyI6Im9ubGluZSIsImlhdCI6MTcyMDQyMjM4OCwiZXhwIjoxNzIwNTA4Nzg4fQ.tY7EwyFR8MZj7ZsXN-3j-TSzw7fgnaBTXeiJH1ox9To",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"companyName\":\"company11\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/company/update/668a8e8d2d57fb7521687663",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"company",
+								"update",
+								"668a8e8d2d57fb7521687663"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "accesstoken",
+								"value": "accesstoken_eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Inp5YWRkcnd5c2g5QGdtYWlsLmNvbSIsIl9pZCI6IjY2OGEzNTI3M2VkNGJhNjYwM2FlMDA4YyIsInN0YXR1cyI6Im9ubGluZSIsImlhdCI6MTcyMDQyNTY0MSwiZXhwIjoxNzIwNTEyMDQxfQ.mvdJBZG8jnpzsSUlv4wVsIUBQk498j5SSZMlR4_36xY",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/company/delete/668b9f9afc08c1708842490f",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"company",
+								"delete",
+								"668b9f9afc08c1708842490f"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "search",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accesstoken",
+								"value": "accesstoken_eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Inp5YWRkcnd5c2g5QGdtYWlsLmNvbSIsIl9pZCI6IjY2OGEzNTI3M2VkNGJhNjYwM2FlMDA4YyIsInN0YXR1cyI6Im9ubGluZSIsImlhdCI6MTcyMDQyMjM4OCwiZXhwIjoxNzIwNTA4Nzg4fQ.tY7EwyFR8MZj7ZsXN-3j-TSzw7fgnaBTXeiJH1ox9To",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/company/search-company?companyname=company11",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"company",
+								"search-company"
+							],
+							"query": [
+								{
+									"key": "companyname",
+									"value": "company11"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "company-with-jobs",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accesstoken",
+								"value": "accesstoken_eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Inp5YWRkcnd5c2g5QGdtYWlsLmNvbSIsIl9pZCI6IjY2OGEzNTI3M2VkNGJhNjYwM2FlMDA4YyIsInN0YXR1cyI6Im9ubGluZSIsImlhdCI6MTcyMDQyMjM4OCwiZXhwIjoxNzIwNTA4Nzg4fQ.tY7EwyFR8MZj7ZsXN-3j-TSzw7fgnaBTXeiJH1ox9To",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/company/company-with-jobs/668a8e8d2d57fb7521687663",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"company",
+								"company-with-jobs",
+								"668a8e8d2d57fb7521687663"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "app-sp-jobs",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accesstoken",
+								"value": "accesstoken_eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Inp5YWRkcnd5c2gzQGdtYWlsLmNvbSIsIl9pZCI6IjY2OGIxNTVkYTJkYWIwODM5NjQzZDM3OCIsInN0YXR1cyI6Im9ubGluZSIsImlhdCI6MTcyMDQyMjc3MywiZXhwIjoxNzIwNTA5MTczfQ.hbNBJFRBcDs6mvwIvhHXtN2hClElrRQjpIc4i_HyPBw",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/company/app-sp-jobs",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"company",
+								"app-sp-jobs"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "job",
+			"item": [
+				{
+					"name": "add",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "accesstoken",
+								"value": "accesstoken_eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Inp5YWRkcnd5c2g5QGdtYWlsLmNvbSIsIl9pZCI6IjY2OGEzNTI3M2VkNGJhNjYwM2FlMDA4YyIsInN0YXR1cyI6Im9ubGluZSIsImlhdCI6MTcyMDQyNDg2MSwiZXhwIjoxNzIwNTExMjYxfQ.jdirPeptoj8-8Vp-JzylpTzoNInxN1WzhVXdJQP6vP4",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n     \"jobTitle\": \"backend\",\r\n    \"jobLocation\": \"remotely\",\r\n    \"jobDescription\": \"Develop and maintain software applications.\",\r\n    \"workingTime\": \"full-time\",\r\n    \"seniorityLevel\": \"Junior\",\r\n    \"technicalSkills\": [\"JavaScript\", \"Node.js\"],\r\n    \"softSkills\": [\"Communication\", \"Problem-solving\"],\r\n    \"companyid\":\"668b15e7a2dab0839643d384\"\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/job/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"job",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "accesstoken",
+								"value": "accesstoken_eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Inp5YWRkcnd5c2g5QGdtYWlsLmNvbSIsIl9pZCI6IjY2OGEzNTI3M2VkNGJhNjYwM2FlMDA4YyIsInN0YXR1cyI6Im9ubGluZSIsImlhdCI6MTcyMDQyNDI5NiwiZXhwIjoxNzIwNTEwNjk2fQ.lMufgk29mlN0Kk6dwnXLvUm0ujgBWQOYRdKWKWmUEOM",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"technicalSkills\": [\"JavaScript\", \"Node.js\",\"c++\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/job/update/668b91dea5f8b0c540285d54",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"job",
+								"update",
+								"668b91dea5f8b0c540285d54"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "accesstoken",
+								"value": "accesstoken_eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Inp5YWRkcnd5c2g5QGdtYWlsLmNvbSIsIl9pZCI6IjY2OGEzNTI3M2VkNGJhNjYwM2FlMDA4YyIsInN0YXR1cyI6Im9ubGluZSIsImlhdCI6MTcyMDQyNDI5NiwiZXhwIjoxNzIwNTEwNjk2fQ.lMufgk29mlN0Kk6dwnXLvUm0ujgBWQOYRdKWKWmUEOM",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/job/delete/668bab8f99b21dbba3c6bc27",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"job",
+								"delete",
+								"668bab8f99b21dbba3c6bc27"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "applyjob",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "accesstoken",
+								"value": "accesstoken_eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Inp5YWRkcnd5c2gzQGdtYWlsLmNvbSIsIl9pZCI6IjY2OGIxNTVkYTJkYWIwODM5NjQzZDM3OCIsInN0YXR1cyI6Im9ubGluZSIsImlhdCI6MTcyMDQyOTM0NywiZXhwIjoxNzIwNTE1NzQ3fQ.TvZaBnVH2MLz2RWQr54UGfLUD44qjueUYoy4niGMuCc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "cv",
+									"type": "file",
+									"src": "/C:/Users/zead/Desktop/CV/Zead Mohamed Back-End .pdf"
+								},
+								{
+									"key": "userTechSkills",
+									"value": "[\"JavaScript\", \"Node.js\", \"MongoDB\"]",
+									"type": "text"
+								},
+								{
+									"key": "userSoftSkills",
+									"value": "[\"Communication\", \"Teamwork\"]\n",
+									"type": "text"
+								},
+								{
+									"key": "jobId",
+									"value": "668bab8f99b21dbba3c6bc27",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/job/application",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"job",
+								"application"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "find-filter-job",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accesstoken",
+								"value": "accesstoken_eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Inp5YWRkcnd5c2gzQGdtYWlsLmNvbSIsIl9pZCI6IjY2OGIxNTVkYTJkYWIwODM5NjQzZDM3OCIsInN0YXR1cyI6Im9ubGluZSIsImlhdCI6MTcyMDQyOTM0NywiZXhwIjoxNzIwNTE1NzQ3fQ.TvZaBnVH2MLz2RWQr54UGfLUD44qjueUYoy4niGMuCc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/job/find-job?seniorityLevel=Junior&jobLocation=remotely",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"job",
+								"find-job"
+							],
+							"query": [
+								{
+									"key": "seniorityLevel",
+									"value": "Junior"
+								},
+								{
+									"key": "jobLocation",
+									"value": "remotely"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "jobs-sp-company",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accesstoken",
+								"value": "accesstoken_eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Inp5YWRkcnd5c2gzQGdtYWlsLmNvbSIsIl9pZCI6IjY2OGIxNTVkYTJkYWIwODM5NjQzZDM3OCIsInN0YXR1cyI6Im9ubGluZSIsImlhdCI6MTcyMDQyOTM0NywiZXhwIjoxNzIwNTE1NzQ3fQ.TvZaBnVH2MLz2RWQr54UGfLUD44qjueUYoy4niGMuCc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/job/jobs-sp-company?companyName=Tech Innovators Inc.",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"job",
+								"jobs-sp-company"
+							],
+							"query": [
+								{
+									"key": "companyName",
+									"value": "Tech Innovators Inc."
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "jobs-with-companys",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accesstoken",
+								"value": "accesstoken_eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Inp5YWRkcnd5c2gzQGdtYWlsLmNvbSIsIl9pZCI6IjY2OGIxNTVkYTJkYWIwODM5NjQzZDM3OCIsInN0YXR1cyI6Im9ubGluZSIsImlhdCI6MTcyMDQyOTM0NywiZXhwIjoxNzIwNTE1NzQ3fQ.TvZaBnVH2MLz2RWQr54UGfLUD44qjueUYoy4niGMuCc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/job/jobs-with-companys",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"job",
+								"jobs-with-companys"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
